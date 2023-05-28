@@ -10,10 +10,16 @@
 // Write a function that calculates the price of an order of apples given
 // the quantity bought. No hints this time!
 
-// I AM NOT DONE
-
 // Put your function here!
-// fn calculate_price_of_apples {
+fn calculate_price_of_apples(num_items: u32) -> u32 {
+    const price_reduction_threshold: u32 = 40;
+    const discount: u32 = 1;
+    let mut cost = 2;
+    if num_items > price_reduction_threshold {
+        cost -= discount;
+    }
+    num_items * cost
+}
 
 // Don't modify this function!
 #[test]
